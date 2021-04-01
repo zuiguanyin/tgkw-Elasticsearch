@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://42.192.227.28:3306/demo?characterEncoding=utf8&useSSL=false&rewriteBatchedStatements=true
+      username: root
+      password: caihang@baozi
+      initial-size: 2
+      max-active: 10
+      min-idle: 2
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 5
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: false
+        wall:
+          config:
+            multi-statement-allow: true
+  elasticsearch:
+    rest:
+      connection-timeout: 1s
+      uris: http://192.168.1.144:9200
