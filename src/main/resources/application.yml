@@ -2,9 +2,9 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://42.192.227.28:3306/demo?characterEncoding=utf8&useSSL=false&rewriteBatchedStatements=true
+      url: jdbc:mysql://192.168.1.132:3306/demo?characterEncoding=utf8&useSSL=false&rewriteBatchedStatements=true
       username: root
-      password: caihang@baozi
+      password:
       initial-size: 2
       max-active: 10
       min-idle: 2
